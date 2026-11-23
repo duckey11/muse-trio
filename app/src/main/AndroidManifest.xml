@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- WebView butuh internet. -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Supaya voice / kamera di muse.ai bisa dipakai dari WebView. -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- Upload lampiran dari file picker (Android 12 ke bawah). -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Muse Trio"
+        android:theme="@style/Theme.MuseTrio">
+
+        <!-- Pemilih profil (proses utama, tidak pernah membuat WebView). -->
+        <activity
+            android:name=".ProfilePickerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- WebView tiap profil jalan di prosesnya sendiri, supaya
+             WebView.setDataDirectorySuffix() bisa memberi tiap profil
+             cookie/storage sendiri dan login akun Meta berbeda. -->
+        <activity
+            android:name=".MuseWebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:process=":muse_p1" />
+
+        <activity
+            android:name=".MuseWebActivityP2"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:process=":muse_p2" />
+
+        <activity
+            android:name=".MuseWebActivityP3"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:exported="false"
+            android:process=":muse_p3" />
+
+    </application>
+</manifest>

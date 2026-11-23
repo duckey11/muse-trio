@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Muse Trio"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Tiga akun Muse dalam satu aplikasi. Pilih profil, lalu login dengan akun Meta yang berbeda di tiap profil. Tanpa iklan, tanpa tracking."
+        android:textSize="13sp" />
+
+    <Button
+        android:id="@+id/btn_profile1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Profil 1" />
+
+    <Button
+        android:id="@+id/btn_profile2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Profil 2" />
+
+    <Button
+        android:id="@+id/btn_profile3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Profil 3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Catatan: ini versi web muse.ai di dalam aplikasi, bukan aplikasi Muse asli. Login tiap profil tersimpan sendiri-sendiri. Tombol kembali di dalam Muse akan kembali ke halaman sebelumnya, sekali lagi kembali ke layar ini."
+        android:textSize="12sp" />
+
+</LinearLayout>

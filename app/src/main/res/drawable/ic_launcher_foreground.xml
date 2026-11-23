@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Tiga gelembung chat bertumpuk: tiga profil Muse. -->
+    <path
+        android:fillAlpha="0.45"
+        android:fillColor="#FFFFFF"
+        android:pathData="M22,26h40a8,8 0 0 1 8,8v16a8,8 0 0 1 -8,8h-24l-10,10v-10h-6a8,8 0 0 1 -8,-8v-16a8,8 0 0 1 8,-8z" />
+    <path
+        android:fillAlpha="0.7"
+        android:fillColor="#FFFFFF"
+        android:pathData="M34,46h40a8,8 0 0 1 8,8v14a8,8 0 0 1 -8,8h-6v8l-9,-8h-25a8,8 0 0 1 -8,-8v-14a8,8 0 0 1 8,-8z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M46,64h34a8,8 0 0 1 8,8v12a8,8 0 0 1 -8,8h-20l-8,8v-8h-6a8,8 0 0 1 -8,-8v-12a8,8 0 0 1 8,-8z" />
+</vector>
