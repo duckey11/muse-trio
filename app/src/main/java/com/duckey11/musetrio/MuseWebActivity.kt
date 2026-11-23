@@ -5,13 +5,16 @@ import android.app.Activity
 import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.Color
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.webkit.CookieManager
 import android.webkit.PermissionRequest
 import android.webkit.ValueCallback
 import android.webkit.WebChromeClient
 import android.webkit.WebResourceRequest
+import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
@@ -56,6 +59,10 @@ open class MuseWebActivity : Activity() {
         CookieManager.getInstance().setAcceptThirdPartyCookies(webView, true)
         CookieManager.getInstance().setAcceptCookie(true)
 
+        // Tema gelap (v1.0.1): latar WebView gelap supaya tidak ada
+        // kilatan putih saat halaman dimuat.
+        webView.setBackgroundColor(Color.parseColor("#121212"))
+
         webView.settings.apply {
             javaScriptEnabled = true
             domStorageEnabled = true
@@ -65,6 +72,15 @@ open class MuseWebActivity : Activity() {
             displayZoomControls = false
             allowFileAccess = true
             mediaPlaybackRequiresUserGesture = false
+            // Paksa mode gelap WebView (API 29+): halaman melihat
+            // prefers-color-scheme: dark, jadi muse.ai merender tema
+            // gelap aslinya; konten yang tidak mendukung tema gelap
+            // ikut digelapkan secara algoritmik. Di Android 9
+            // (API 28) API ini belum ada, WebView tetap terang.
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+                @Suppress("DEPRECATION")
+                forceDark = WebSettings.FORCE_DARK_ON
+            }
         }
 
         webView.webViewClient = object : WebViewClient() {

@@ -21,7 +21,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 BT="$ANDROID_HOME/build-tools/34.0.0"
 ANDROID_JAR="$ANDROID_HOME/platforms/android-34/android.jar"
 OUT="$ROOT/manual-build"
-APK_NAME="muse-trio-1.0.0-debug.apk"
+APK_NAME="muse-trio-1.0.1-debug.apk"
 
 for tool in "$BT/aapt2" "$BT/d8" "$BT/zipalign" "$BT/apksigner" "$KOTLINC_HOME/bin/kotlinc" "$ANDROID_JAR"; do
     if [ ! -e "$tool" ]; then
@@ -48,8 +48,8 @@ sed 's|<manifest xmlns:android="http://schemas.android.com/apk/res/android">|<ma
     --auto-add-overlay \
     --min-sdk-version 28 \
     --target-sdk-version 34 \
-    --version-code 1 \
-    --version-name 1.0.0 \
+    --version-code 2 \
+    --version-name 1.0.1 \
     --debug-mode \
     "$OUT/compiled-res.zip"
 

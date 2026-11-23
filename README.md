@@ -5,7 +5,9 @@ Satu aplikasi Android berisi tiga akun Muse. Tiap profil login ke
 jadi bisa ganti-ganti akun tanpa logout.
 
 Ringan, tanpa iklan, tanpa internet (selain ke muse.ai sendiri),
-tanpa tracking.
+tanpa tracking. **Tema gelap** sejak v1.0.1: UI aplikasi gelap
+dan halaman muse.ai juga digelapkan (tema gelap asli situs kalau
+mendukung, kalau tidak digelapkan otomatis).
 
 ## Cara kerja
 
@@ -44,7 +46,16 @@ mic, dan kamera sudah diizinkan ke WebView.
   jalan. Itu baru bisa dipastikan setelah dicoba di HP.
 - APK ini debug-signed. Update berikutnya harus pakai signature
   yang sama, kalau tidak Android menolak install update.
-- MinSdk 28 (Android 9 ke atas), targetSdk 34.
+- MinSdk 28 (Android 9 ke atas), targetSdk 34. Penggelapan
+  halaman web butuh Android 10 ke atas (API 29+); di Android 9
+  UI aplikasi tetap gelap, tapi halaman web bisa tetap terang.
+
+## Riwayat versi
+
+- **v1.0.1** — tema gelap: UI aplikasi dipaksa gelap dan WebView
+  memakai force dark (tema gelap asli muse.ai + penggelapan
+  otomatis untuk konten yang belum mendukung gelap).
+- v1.0.0 — rilis pertama.
 
 ## Build sendiri
 

@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background_dark"
     android:padding="16dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Muse Trio"
+        android:textColor="@color/text_primary_dark"
         android:textSize="22sp"
         android:textStyle="bold" />
 
@@ -17,6 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:text="Tiga akun Muse dalam satu aplikasi. Pilih profil, lalu login dengan akun Meta yang berbeda di tiap profil. Tanpa iklan, tanpa tracking."
+        android:textColor="@color/text_secondary_dark"
         android:textSize="13sp" />
 
     <Button
@@ -45,6 +48,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="Catatan: ini versi web muse.ai di dalam aplikasi, bukan aplikasi Muse asli. Login tiap profil tersimpan sendiri-sendiri. Tombol kembali di dalam Muse akan kembali ke halaman sebelumnya, sekali lagi kembali ke layar ini."
+        android:textColor="@color/text_secondary_dark"
         android:textSize="12sp" />
 
 </LinearLayout>

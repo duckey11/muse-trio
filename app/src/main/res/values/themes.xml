@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.MuseTrio" parent="android:Theme.Material.Light.NoActionBar">
-        <item name="android:colorPrimary">#0E7490</item>
-        <item name="android:colorPrimaryDark">#155E75</item>
-        <item name="android:colorAccent">#06B6D4</item>
+    <!-- Tema GELAP dipaksa: parent Material gelap, jadi UI native
+         (pemilih profil) selalu gelap, tidak mengikuti tema sistem. -->
+    <style name="Theme.MuseTrio" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorPrimary">#22D3EE</item>
+        <item name="android:colorPrimaryDark">#0E7490</item>
+        <item name="android:colorAccent">#22D3EE</item>
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:colorBackground">@color/background_dark</item>
+        <item name="android:navigationBarColor">@color/background_dark</item>
+        <item name="android:statusBarColor">@color/background_dark</item>
+        <item name="android:textColorPrimary">@color/text_primary_dark</item>
+        <item name="android:textColorSecondary">@color/text_secondary_dark</item>
     </style>
 </resources>
